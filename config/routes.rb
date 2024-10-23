@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :ridings, only: [:index, :show]
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :ridings, only: [:index, :show] do
+    resources :polling_locations, only: [:index] do
+      collection do
+        patch :update
+      end
+    end
+  end
 
-  # Defines the root path route ("/")
   root "ridings#index"
 end

@@ -7,6 +7,8 @@ class PollingLocation < ApplicationRecord
   validates :city, presence: true
   validates :postal_code, presence: true
   validate :validate_postal_code
+
+  validates :title, uniqueness: { scope: [:address, :city, :postal_code, :riding_id], message: "Polling locations must be unique in each riding" }
   
   after_validation :format_postal_code
 
