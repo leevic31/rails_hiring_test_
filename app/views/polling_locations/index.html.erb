@@ -47,18 +47,17 @@
                         <input
                             type="text"
                             placeholder="Add poll number"
+                            title="Add poll number and press Enter"
                             data-poll-manager-target="pollInput"
                             class="border rounded p-1 w-full mt-1"
                             data-action="keydown->poll-manager#addPoll"
                         />
-
                         <input 
                             type="hidden" 
                             name="polling_locations[<%= polling_location.id %>][poll_numbers][]" 
                             value="<%= polling_location.polls.pluck(:number).join(',') %>" 
                             class="poll-numbers"
                         />
-
                     </div>
                 </div>
             </div>
