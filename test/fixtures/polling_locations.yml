@@ -4,12 +4,19 @@ one:
   title: MyString
   address: MyString
   city: MyString
-  postal_code: MyString
+  postal_code: a1a1a1
   riding: one
 
 two:
   title: MyString
   address: MyString
   city: MyString
-  postal_code: MyString
+  postal_code: a1a1a1
   riding: two
+
+three:
+  title: PollingLocationThree
+  address: MyString
+  city: MyString
+  postal_code: a1a1a1
+  riding: one
